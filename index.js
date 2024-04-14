@@ -182,7 +182,13 @@ const keywords = {
 };
 
 async function checkKeywords(message, category) {
-    return keywords[category].every(keyword => message.includes(keyword));
+    console.log('Checking keywords for category:', category);
+    console.log('Message:', message);
+
+    const result = keywords[category].every(keyword => message.includes(keyword));
+    console.log('Result:', result);
+
+    return result;
 }
 
 async function handleNewMessages(req, res) {

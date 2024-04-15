@@ -275,7 +275,7 @@ async function handleNewMessages(req, res) {
                 }
                 
                 if (!keywordMatched) {
-                    checkKeywords(message.text.body.toLowerCase(), 'buat')
+                    await checkKeywords(message.text.body.toLowerCase(), 'buat')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Saya tengah sibuk kira harga tint ni, nak quote best untuk customer.' });
@@ -288,7 +288,7 @@ async function handleNewMessages(req, res) {
                 }
                 
                 if (!keywordMatched) {
-                    checkKeywords(message.text.body.toLowerCase(), 'ok')
+                    await checkKeywords(message.text.body.toLowerCase(), 'ok')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Ok je, lagi ok kalau dapat bantu awak pilih tint!' });
@@ -301,7 +301,7 @@ async function handleNewMessages(req, res) {
                 }
                 
                 if (!keywordMatched) {
-                    checkKeywords(message.text.body.toLowerCase(), 'adik')
+                    await checkKeywords(message.text.body.toLowerCase(), 'adik')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Ada, semua film tint kami macam adik beradik, setiap satu ada kelebihannya.' });
@@ -314,7 +314,7 @@ async function handleNewMessages(req, res) {
                 }
                 
                 if (!keywordMatched) {
-                    checkKeywords(message.text.body.toLowerCase(), 'suka warna')
+                    await checkKeywords(message.text.body.toLowerCase(), 'suka warna')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Suka warna yang boleh reflect haba, macam cermin film kami ni.' });
@@ -327,7 +327,7 @@ async function handleNewMessages(req, res) {
                 }
                 
                 if (!keywordMatched) {
-                    checkKeywords(message.text.body.toLowerCase(), 'suka makan')
+                    await checkKeywords(message.text.body.toLowerCase(), 'suka makan')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Saya suka semua, asalkan tak panas macam haba yang tint kami tolak.' });
@@ -340,7 +340,7 @@ async function handleNewMessages(req, res) {
                 }
                 
                 if (!keywordMatched) {
-                    checkKeywords(message.text.body.toLowerCase(), 'block UV')
+                    await checkKeywords(message.text.body.toLowerCase(), 'block UV')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Ha\'ah, block UV 99%.' });
@@ -353,7 +353,7 @@ async function handleNewMessages(req, res) {
                 }
 
                 if (!keywordMatched) {
-                    checkKeywords(message.text.body.toLowerCase(), 'warranty')
+                    await checkKeywords(message.text.body.toLowerCase(), 'warranty')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Ada warranty 1 tahun sampai 3 tahun, bergantung pada jenis filem yang kau pilih.' });
@@ -366,7 +366,7 @@ async function handleNewMessages(req, res) {
                 }
                 
                 if (!keywordMatched) {
-                    checkKeywords(message.text.body.toLowerCase(), 'pilih warna')
+                    await checkKeywords(message.text.body.toLowerCase(), 'pilih warna')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Boleh, ada pelbagai pilihan warna.' });
@@ -379,7 +379,7 @@ async function handleNewMessages(req, res) {
                 }
                  
                 if (!keywordMatched) {
-                    checkKeywords(message.text.body.toLowerCase(), 'harga')
+                    await checkKeywords(message.text.body.toLowerCase(), 'harga')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Harga start dari RM5.50 untuk setiap kaki persegi.' });
@@ -392,7 +392,7 @@ async function handleNewMessages(req, res) {
                 }
                 
                 if (!keywordMatched) {
-                    checkKeywords(message.text.body.toLowerCase(), 'pasang cepat')
+                    await checkKeywords(message.text.body.toLowerCase(), 'pasang cepat')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Cepat, tak lama.' });
@@ -405,7 +405,7 @@ async function handleNewMessages(req, res) {
                 }
                 
                 if (!keywordMatched) {
-                    checkKeywords(message.text.body.toLowerCase(), 'bayar ansuran')
+                    await checkKeywords(message.text.body.toLowerCase(), 'bayar ansuran')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Ada, boleh guna atome untuk bayar ansuran 3 kali.' });
@@ -418,7 +418,7 @@ async function handleNewMessages(req, res) {
                 }
                 
                 if (!keywordMatched) {
-                    checkKeywords(message.text.body.toLowerCase(), 'jenama')
+                    await checkKeywords(message.text.body.toLowerCase(), 'jenama')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Jenama SUNz!' });
@@ -431,7 +431,7 @@ async function handleNewMessages(req, res) {
                 }
                 
                 if (!keywordMatched) {
-                    checkKeywords(message.text.body.toLowerCase(), 'reflective film')
+                    await checkKeywords(message.text.body.toLowerCase(), 'reflective film')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Reflective film tu macam cermin satu hala, privasi terjaga.' });
@@ -444,7 +444,7 @@ async function handleNewMessages(req, res) {
                 }
 
                 if (!keywordMatched) {
-                    checkKeywords(message.text.body.toLowerCase(), 'frosted sticker')
+                    await checkKeywords(message.text.body.toLowerCase(), 'frosted sticker')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Frosted sticker tu untuk privacy, tak nampak dalam dari luar.' });
@@ -457,7 +457,7 @@ async function handleNewMessages(req, res) {
                 }
                 
                 if (!keywordMatched) {
-                    checkKeywords(message.text.body.toLowerCase(), 'carbon film') && checkKeywords(message.text.body.toLowerCase(), 'ceramic film')
+                    await checkKeywords(message.text.body.toLowerCase(), 'carbon film') && checkKeywords(message.text.body.toLowerCase(), 'ceramic film')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Carbon film guna partikel carbon, ceramic film guna teknologi nano-ceramic, dua-dua bagus untuk block haba.' });
@@ -470,7 +470,7 @@ async function handleNewMessages(req, res) {
                 }
                 
                 if (!keywordMatched) {
-                    checkKeywords(message.text.body.toLowerCase(), 'minum apa')
+                    await checkKeywords(message.text.body.toLowerCase(), 'minum apa')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Saya selalu start hari dengan kopi, bantu fokus pada kerja tinting.' });
@@ -483,7 +483,7 @@ async function handleNewMessages(req, res) {
                 }
                 
                 if (!keywordMatched) {
-                    checkKeywords(message.text.body.toLowerCase(), 'hobi')
+                    await checkKeywords(message.text.body.toLowerCase(), 'hobi')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Hobi saya adalah memastikan setiap tingkap dan kereta dilindungi dengan baik.' });
@@ -496,20 +496,20 @@ async function handleNewMessages(req, res) {
                 }
                  
                 if (!keywordMatched) {
-                    checkKeywords(message.text.body.toLowerCase(), 'cuti-cuti')
-                    .then(result => {
-                        if (result) {
-                            sendWhapiRequest('messages/text', { to: sender.to, body: 'Saya suka explore tempat baru, tapi ingat, tingkap rumah kena tint dulu sebelum pergi!' });
-                            keywordMatched = true;
-                        }
-                    })
-                    .catch(error => {
-                        console.error('Error:', error);
-                    });
+                    await checkKeywords(message.text.body.toLowerCase(), 'cuti-cuti')
+                        .then(result => {
+                            if (result) {
+                                sendWhapiRequest('messages/text', { to: sender.to, body: 'Saya suka explore tempat baru, tapi ingat, tingkap rumah kena tint dulu sebelum pergi!' });
+                                keywordMatched = true;
+                            }
+                        })
+                        .catch(error => {
+                            console.error('Error:', error);
+                        });
                 }
                 
                 if (!keywordMatched) {
-                    checkKeywords(message.text.body.toLowerCase(), 'bangun pukul')
+                    await checkKeywords(message.text.body.toLowerCase(), 'bangun pukul')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Awal, sekitar pukul 6. Mula hari dengan semangat untuk tinting.' });
@@ -522,7 +522,7 @@ async function handleNewMessages(req, res) {
                 }
                 
                 if (!keywordMatched) {
-                    checkKeywords(message.text.body.toLowerCase(), 'suka muzik')
+                    await checkKeywords(message.text.body.toLowerCase(), 'suka muzik')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Saya suka dengar jazz, santai macam tingkap yang dah tinted.' });
@@ -535,7 +535,7 @@ async function handleNewMessages(req, res) {
                 }
                 
                 if (!keywordMatched) {
-                    checkKeywords(message.text.body.toLowerCase(), 'pandai masak')
+                    await checkKeywords(message.text.body.toLowerCase(), 'pandai masak')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Bukan chef, tapi pandai pilih tint terbaik!' });
@@ -548,7 +548,7 @@ async function handleNewMessages(req, res) {
                 }
                 
                 if (!keywordMatched) {
-                    checkKeywords(message.text.body.toLowerCase(), 'suka buku')
+                    await checkKeywords(message.text.body.toLowerCase(), 'suka buku')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Saya suka baca buku pasal inovasi, macam teknologi tint kami yang terkini.' });
@@ -561,7 +561,7 @@ async function handleNewMessages(req, res) {
                 }
                 
                 if (!keywordMatched) {
-                    checkKeywords(message.text.body.toLowerCase(), 'suka')
+                    await checkKeywords(message.text.body.toLowerCase(), 'suka')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Suka lari, kejar kepuasan pelanggan kami.' });
@@ -574,7 +574,7 @@ async function handleNewMessages(req, res) {
                 }
                 
                 if (!keywordMatched) {
-                    checkKeywords(message.text.body.toLowerCase(), 'travel')
+                    await checkKeywords(message.text.body.toLowerCase(), 'travel')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Suka, tapi saya lebih suka pastikan pelanggan dapat tint terbaik.' });
@@ -587,7 +587,7 @@ async function handleNewMessages(req, res) {
                 }
                 
                 if (!keywordMatched) {
-                    checkKeywords(message.text.body.toLowerCase(), 'kopi atau teh')
+                    await checkKeywords(message.text.body.toLowerCase(), 'kopi atau teh')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Kopi, bantu saya kekal aktif.' });
@@ -600,7 +600,7 @@ async function handleNewMessages(req, res) {
                 }
                 
                 if (!keywordMatched) {
-                    checkKeywords(message.text.body.toLowerCase(), 'manis ke pedas')
+                    await checkKeywords(message.text.body.toLowerCase(), 'manis ke pedas')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Saya lebih ke manis, macam manisnya deal tint kami.' });
@@ -613,7 +613,7 @@ async function handleNewMessages(req, res) {
                 }
 
                 if (!keywordMatched) {
-                    checkKeywords(message.text.body.toLowerCase(), 'laut ke gunung')
+                    await checkKeywords(message.text.body.toLowerCase(), 'laut ke gunung')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Laut, tapi pastikan kereta anda tint dulu untuk perlindungan UV.' });
@@ -626,7 +626,7 @@ async function handleNewMessages(req, res) {
                 }
 
                 if (!keywordMatched) {
-                    checkKeywords(message.text.body.toLowerCase(), 'masakan barat ke timur')
+                    await checkKeywords(message.text.body.toLowerCase(), 'masakan barat ke timur')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Suka kedua-duanya, macam versatiliti tint kami.' });
@@ -639,7 +639,7 @@ async function handleNewMessages(req, res) {
                 }
 
                 if (!keywordMatched) {
-                    checkKeywords(message.text.body.toLowerCase(), 'baca berita')
+                    await checkKeywords(message.text.body.toLowerCase(), 'baca berita')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Baca sikit, kebanyakkan masa saya fokus pada kerja tinting.' });
@@ -652,7 +652,7 @@ async function handleNewMessages(req, res) {
                 }
 
                 if (!keywordMatched) {
-                    checkKeywords(message.text.body.toLowerCase(), 'main game')
+                    await checkKeywords(message.text.body.toLowerCase(), 'main game')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Jarang, kebanyakan masa saya dedicated untuk improve servis tinting.' });
@@ -665,7 +665,7 @@ async function handleNewMessages(req, res) {
                 }
 
                 if (!keywordMatched) {
-                    checkKeywords(message.text.body.toLowerCase(), 'suka warna')
+                    await checkKeywords(message.text.body.toLowerCase(), 'suka warna')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Saya suka semua warna, asal sesuai dengan pilihan tint pelanggan.' });
@@ -678,7 +678,7 @@ async function handleNewMessages(req, res) {
                 }
 
                 if (!keywordMatched) {
-                    checkKeywords(message.text.body.toLowerCase(), 'prefer nasi atau roti')
+                    await checkKeywords(message.text.body.toLowerCase(), 'prefer nasi atau roti')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Nasi, kuatkan tenaga untuk kerja tinting.' });
@@ -691,7 +691,7 @@ async function handleNewMessages(req, res) {
                 }
 
                 if (!keywordMatched) {
-                    checkKeywords(message.text.body.toLowerCase(), 'suka tengok tv')
+                    await checkKeywords(message.text.body.toLowerCase(), 'suka tengok tv')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Kadang-kadang, tapi lebih fokus pada kerja tinting kami.' });
@@ -704,7 +704,7 @@ async function handleNewMessages(req, res) {
                 }
 
                 if (!keywordMatched) {
-                    checkKeywords(message.text.body.toLowerCase(), 'suka musim')
+                    await checkKeywords(message.text.body.toLowerCase(), 'suka musim')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Sejuk, macam sejuknya dalam kereta yang dah tint.' });
@@ -717,7 +717,7 @@ async function handleNewMessages(req, res) {
                 }
 
                 if (!keywordMatched) {
-                    checkKeywords(message.text.body.toLowerCase(), 'suka makan di luar ke masak sendiri')
+                    await checkKeywords(message.text.body.toLowerCase(), 'suka makan di luar ke masak sendiri')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Prefer masak, tapi kadang makan luar, macam fleksibiliti servis kami.' });
@@ -730,20 +730,20 @@ async function handleNewMessages(req, res) {
                 }
 
                 if (!keywordMatched) {
-                    checkKeywords(message.text.body.toLowerCase(), 'suka kerja berpasukan ke sorang-sorang')
-                    .then(result => {
-                        if (result) {
-                            sendWhapiRequest('messages/text', { to: sender.to, body: 'Berpasukan, macam teamwork kuat kami dalam pasang tint.' });
-                            keywordMatched = true;
-                        }
-                    })
-                    .catch(error => {
-                        console.error('Error:', error);
-                    });
+                    await checkKeywords(message.text.body.toLowerCase(), 'suka kerja berpasukan ke sorang-sorang')
+                        .then(result => {
+                            if (result) {
+                                sendWhapiRequest('messages/text', { to: sender.to, body: 'Berpasukan, macam teamwork kuat kami dalam pasang tint.' });
+                                keywordMatched = true;
+                            }
+                        })
+                        .catch(error => {
+                            console.error('Error:', error);
+                        });
                 }
                 
                 if (!keywordMatched) {
-                    checkKeywords(message.text.body.toLowerCase(), 'keluar negara')
+                    await checkKeywords(message.text.body.toLowerCase(), 'keluar negara')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Pernah, tapi selalu balik untuk pastikan tinting servis terbaik.' });
@@ -756,7 +756,7 @@ async function handleNewMessages(req, res) {
                 }
                 
                 if (!keywordMatched) {
-                    checkKeywords(message.text.body.toLowerCase(), 'cita-cita')
+                    await checkKeywords(message.text.body.toLowerCase(), 'cita-cita')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Tinting dah jadi minat utama, nak jadi yang terbaik dalam bidang ni.' });
@@ -769,7 +769,7 @@ async function handleNewMessages(req, res) {
                 }
                 
                 if (!keywordMatched) {
-                    checkKeywords(message.text.body.toLowerCase(), 'suka pizza ke burger')
+                    await checkKeywords(message.text.body.toLowerCase(), 'suka pizza ke burger')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Pizza, macam pelbagai pilihan tint kami.' });
@@ -782,7 +782,7 @@ async function handleNewMessages(req, res) {
                 }
                 
                 if (!keywordMatched) {
-                    checkKeywords(message.text.body.toLowerCase(), 'suka masak apa')
+                    await checkKeywords(message.text.body.toLowerCase(), 'suka masak apa')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Suka masak simple, fokus lebih pada kerja tint.' });
@@ -795,7 +795,7 @@ async function handleNewMessages(req, res) {
                 }
                 
                 if (!keywordMatched) {
-                    checkKeywords(message.text.body.toLowerCase(), 'minat fotografi')
+                    await checkKeywords(message.text.body.toLowerCase(), 'minat fotografi')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Tak sangat, tapi minat tengok hasil kerja tint yang cantik.' });
@@ -808,7 +808,7 @@ async function handleNewMessages(req, res) {
                 }
                 
                 if (!keywordMatched) {
-                    checkKeywords(message.text.body.toLowerCase(), 'suka gym ke jogging')
+                    await checkKeywords(message.text.body.toLowerCase(), 'suka gym ke jogging')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Jogging, bantu saya refresh dan fikir ide baru untuk tint.' });
@@ -821,7 +821,7 @@ async function handleNewMessages(req, res) {
                 }
                 
                 if (!keywordMatched) {
-                    checkKeywords(message.text.body.toLowerCase(), 'suka pantai ke hutan')
+                    await checkKeywords(message.text.body.toLowerCase(), 'suka pantai ke hutan')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Pantai, relax sambil fikir pasal inovasi tint.' });
@@ -834,7 +834,7 @@ async function handleNewMessages(req, res) {
                 }
                 
                 if (!keywordMatched) {                
-                    checkKeywords(message.text.body.toLowerCase(), 'suka musim hujan')
+                    await checkKeywords(message.text.body.toLowerCase(), 'suka musim hujan')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Ok saja, kerja tint tetap jalan.' });
@@ -847,7 +847,7 @@ async function handleNewMessages(req, res) {
                 }
                 
                 if (!keywordMatched) {                
-                    checkKeywords(message.text.body.toLowerCase(), 'prefer movie kat rumah ke pawagam')
+                    await checkKeywords(message.text.body.toLowerCase(), 'prefer movie kat rumah ke pawagam')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Rumah, lebih selesa macam rumah yang dah tint.' });
@@ -860,20 +860,20 @@ async function handleNewMessages(req, res) {
                 }
                 
                 if (!keywordMatched) {  
-                    checkKeywords(message.text.body.toLowerCase(), 'suka jalan-jalan di mall')
-                    .then(result => {
-                        if (result) {
-                            sendWhapiRequest('messages/text', { to: sender.to, body: 'Kadang, tapi kebanyakan masa di workshop tint.' });
-                            keywordMatched = true;
-                        }
-                    })
-                    .catch(error => {
-                        console.error('Error:', error);
-                    });
+                    await checkKeywords(message.text.body.toLowerCase(), 'suka jalan-jalan di mall')
+                        .then(result => {
+                            if (result) {
+                                sendWhapiRequest('messages/text', { to: sender.to, body: 'Kadang, tapi kebanyakan masa di workshop tint.' });
+                                keywordMatched = true;
+                            }
+                        })
+                        .catch(error => {
+                            console.error('Error:', error);
+                        });
                 }
                 
                 if (!keywordMatched) {  
-                    checkKeywords(message.text.body.toLowerCase(), 'suka online shopping')
+                    await checkKeywords(message.text.body.toLowerCase(), 'suka online shopping')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Sikit-sikit, tapi lebih suka tengok barang tint secara langsung.' });
@@ -886,7 +886,7 @@ async function handleNewMessages(req, res) {
                 }
                 
                 if (!keywordMatched) {                 
-                    checkKeywords(message.text.body.toLowerCase(), 'suka berkemah')
+                    await checkKeywords(message.text.body.toLowerCase(), 'suka berkemah')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Jarang, lebih banyak masa saya di workshop tint.' });
@@ -899,7 +899,7 @@ async function handleNewMessages(req, res) {
                 }
                 
                 if (!keywordMatched) {                  
-                    checkKeywords(message.text.body.toLowerCase(), 'suka main alat muzik')
+                    await checkKeywords(message.text.body.toLowerCase(), 'suka main alat muzik')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Tidak, fokus saya lebih pada kerja tint.' });
@@ -912,7 +912,7 @@ async function handleNewMessages(req, res) {
                 }
                 
                 if (!keywordMatched) {                  
-                    checkKeywords(message.text.body.toLowerCase(), 'suka makanan laut')
+                    await checkKeywords(message.text.body.toLowerCase(), 'suka makanan laut')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Suka, macam saya suka lihat kereta bersinar dengan tint baru.' });
@@ -925,7 +925,7 @@ async function handleNewMessages(req, res) {
                 }
                 
                 if (!keywordMatched) {                  
-                    checkKeywords(message.text.body.toLowerCase(), 'suka masakan pedas')
+                    await checkKeywords(message.text.body.toLowerCase(), 'suka masakan pedas')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Ya, macam kepuasan pelanggan kami bila dapat tint yang mereka nak.' });
@@ -938,7 +938,7 @@ async function handleNewMessages(req, res) {
                 }
                 
                 if (!keywordMatched) {                  
-                    checkKeywords(message.text.body.toLowerCase(), 'suka teh o ais limau')
+                    await checkKeywords(message.text.body.toLowerCase(), 'suka teh o ais limau')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Ya, refreshing macam feeling lepas pasang tint baru.' });
@@ -951,7 +951,7 @@ async function handleNewMessages(req, res) {
                 }
                 
                 if (!keywordMatched) {                  
-                    checkKeywords(message.text.body.toLowerCase(), 'alergi')
+                    await checkKeywords(message.text.body.toLowerCase(), 'alergi')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Tidak, tapi kami pastikan tint kami hypoallergenic.' });
@@ -964,7 +964,7 @@ async function handleNewMessages(req, res) {
                 }
                 
                 if (!keywordMatched) {                  
-                    checkKeywords(message.text.body.toLowerCase(), 'nak buat temujanji macam mana')
+                    await checkKeywords(message.text.body.toLowerCase(), 'nak buat temujanji macam mana')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Guna je chatbot kami, ikut step dia untuk pilih servis dan masa, lepas tu chatbot akan confirmkan temujanji tu.' });
@@ -977,7 +977,7 @@ async function handleNewMessages(req, res) {
                 }
                 
                 if (!keywordMatched) {                  
-                    checkKeywords(message.text.body.toLowerCase(), 'macam mana nak order produk')
+                    await checkKeywords(message.text.body.toLowerCase(), 'macam mana nak order produk')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Pilih je produk yang korang nak dalam chatbot, pastu ikut link pembayaran. Lepas bayar, team kami akan contact korang.' });
@@ -990,20 +990,20 @@ async function handleNewMessages(req, res) {
                 }
                 
                 if (!keywordMatched) {  
-                    checkKeywords(message.text.body.toLowerCase(), 'lepas bayar apa proses seterusnya')
-                    .then(result => {
-                        if (result) {
-                            sendWhapiRequest('messages/text', { to: sender.to, body: 'Kami akan contact untuk confirmkan, pastu chatbot akan hantar notification dan invois.' });
-                            keywordMatched = true;
-                        }
-                    })
-                    .catch(error => {
-                        console.error('Error:', error);
-                    });
+                    await checkKeywords(message.text.body.toLowerCase(), 'lepas bayar apa proses seterusnya')
+                        .then(result => {
+                            if (result) {
+                                sendWhapiRequest('messages/text', { to: sender.to, body: 'Kami akan contact untuk confirmkan, pastu chatbot akan hantar notification dan invois.' });
+                                keywordMatched = true;
+                            }
+                        })
+                        .catch(error => {
+                            console.error('Error:', error);
+                        });
                 }
                 
                 if (!keywordMatched) {                  
-                    checkKeywords(message.text.body.toLowerCase(), 'notification dan invois')
+                    await checkKeywords(message.text.body.toLowerCase(), 'notification dan invois')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Boleh, chatbot kita akan hantar semua tu untuk keep track.' });
@@ -1016,7 +1016,7 @@ async function handleNewMessages(req, res) {
                 }
                 
                 if (!keywordMatched) {                  
-                    checkKeywords(message.text.body.toLowerCase(), 'temujanji boleh ubah tak')
+                    await checkKeywords(message.text.body.toLowerCase(), 'temujanji boleh ubah tak')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Boleh, chat dengan support kami dalam chatbot untuk ubah apa yang perlu.' });
@@ -1029,7 +1029,7 @@ async function handleNewMessages(req, res) {
                 }
                 
                 if (!keywordMatched) {                  
-                    checkKeywords(message.text.body.toLowerCase(), 'PHANTOM X4 harga berapa')
+                    await checkKeywords(message.text.body.toLowerCase(), 'PHANTOM X4 harga berapa')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'PHANTOM X4 RM399 saja. Ada 3 tahun warranty lagi!' });
@@ -1042,7 +1042,7 @@ async function handleNewMessages(req, res) {
                 }
                 
                 if (!keywordMatched) {                  
-                    checkKeywords(message.text.body.toLowerCase(), 'PHANTOM X3 lebih murah dari X4')
+                    await checkKeywords(message.text.body.toLowerCase(), 'PHANTOM X3 lebih murah dari X4')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Betul, X3 RM599, X4 murah sikit. Ada juga 3 tahun warranty tambahan.' });
@@ -1055,7 +1055,7 @@ async function handleNewMessages(req, res) {
                 }
                 
                 if (!keywordMatched) {                  
-                    checkKeywords(message.text.body.toLowerCase(), 'Ada apa best dengan PHANTOM X2')
+                    await checkKeywords(message.text.body.toLowerCase(), 'Ada apa best dengan PHANTOM X2')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'X2 canggih, harga RM899 je. Ada juga 3 tahun warranty tambahan.' });
@@ -1068,7 +1068,7 @@ async function handleNewMessages(req, res) {
                 }
                 
                 if (!keywordMatched) {                  
-                    checkKeywords(message.text.body.toLowerCase(), 'PHANTOM X1 mahal sangat ke')
+                    await checkKeywords(message.text.body.toLowerCase(), 'PHANTOM X1 mahal sangat ke')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'X1 paling top, RM999 tapi worth it. Ada juga 3 tahun warranty tambahan.' });
@@ -1081,7 +1081,7 @@ async function handleNewMessages(req, res) {
                 }
                 
                 if (!keywordMatched) {                  
-                    checkKeywords(message.text.body.toLowerCase(), 'Warranty berapa lama')
+                    await checkKeywords(message.text.body.toLowerCase(), 'Warranty berapa lama')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Setahun punya warranty. Ada juga 3 tahun warranty tambahan.' });
@@ -1094,7 +1094,7 @@ async function handleNewMessages(req, res) {
                 }
                 
                 if (!keywordMatched) {                  
-                    checkKeywords(message.text.body.toLowerCase(), 'Ada free installation')
+                    await checkKeywords(message.text.body.toLowerCase(), 'Ada free installation')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Ada, kita pasang sekali. Ada juga 3 tahun warranty tambahan.' });
@@ -1107,20 +1107,20 @@ async function handleNewMessages(req, res) {
                 }
                 
                 if (!keywordMatched) {  
-                    checkKeywords(message.text.body.toLowerCase(), 'Ada diskaun kalau beli banyak tak')
-                    .then(result => {
-                        if (result) {
-                            sendWhapiRequest('messages/text', { to: sender.to, body: 'Ada, beli banyak dapat murah. Ada juga 3 tahun warranty tambahan.' });
-                            keywordMatched = true;
-                        }
-                    })
-                    .catch(error => {
-                        console.error('Error:', error);
-                    });
+                    await checkKeywords(message.text.body.toLowerCase(), 'Ada diskaun kalau beli banyak tak')
+                        .then(result => {
+                            if (result) {
+                                sendWhapiRequest('messages/text', { to: sender.to, body: 'Ada, beli banyak dapat murah. Ada juga 3 tahun warranty tambahan.' });
+                                keywordMatched = true;
+                            }
+                        })
+                        .catch(error => {
+                            console.error('Error:', error);
+                        });
                 }
                 
                 if (!keywordMatched) {                  
-                    checkKeywords(message.text.body.toLowerCase(), 'Bila sampai lepas order')
+                    await checkKeywords(message.text.body.toLowerCase(), 'Bila sampai lepas order')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Dalam 3-5 hari bekerja. Ada juga 3 tahun warranty tambahan.' });
@@ -1133,7 +1133,7 @@ async function handleNewMessages(req, res) {
                 }
                 
                 if (!keywordMatched) {                  
-                    checkKeywords(message.text.body.toLowerCase(), 'Ada bonus barang tak')
+                    await checkKeywords(message.text.body.toLowerCase(), 'Ada bonus barang tak')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Ada, setiap beli dapat ______ (nyatakan bonus). Ada juga 3 tahun warranty tambahan.' });
@@ -1146,7 +1146,7 @@ async function handleNewMessages(req, res) {
                 }
                 
                 if (!keywordMatched) {                  
-                    checkKeywords(message.text.body.toLowerCase(), 'Boleh pilih warna tak')
+                    await checkKeywords(message.text.body.toLowerCase(), 'Boleh pilih warna tak')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Boleh, ikut suka hati. Ada juga 3 tahun warranty tambahan.' });
@@ -1159,7 +1159,7 @@ async function handleNewMessages(req, res) {
                 }
                 
                 if (!keywordMatched) {                  
-                    checkKeywords(message.text.body.toLowerCase(), 'Lepas beli, ada service tak')
+                    await checkKeywords(message.text.body.toLowerCase(), 'Lepas beli, ada service tak')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Ada, kalau ada masalah boleh contact kita. Ada juga 3 tahun warranty tambahan.' });
@@ -1172,7 +1172,7 @@ async function handleNewMessages(req, res) {
                 }
                 
                 if (!keywordMatched) {                  
-                    checkKeywords(message.text.body.toLowerCase(), 'PHANTOM X4 ada discount tak')
+                    await checkKeywords(message.text.body.toLowerCase(), 'PHANTOM X4 ada discount tak')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'X4 RM399 saja, harga dah murah. Ada 3 tahun warranty lagi! Ada juga bayaran atome 3 ansuran.' });
@@ -1185,7 +1185,7 @@ async function handleNewMessages(req, res) {
                 }
                 
                 if (!keywordMatched) {                  
-                    checkKeywords(message.text.body.toLowerCase(), 'PHANTOM X3 punya warranty berapa lama')
+                    await checkKeywords(message.text.body.toLowerCase(), 'PHANTOM X3 punya warranty berapa lama')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Sama, setahun punya. Ada juga 3 tahun warranty tambahan. Ada juga bayaran atome 3 ansuran.' });
@@ -1198,7 +1198,7 @@ async function handleNewMessages(req, res) {
                 }
                 
                 if (!keywordMatched) {                  
-                    checkKeywords(message.text.body.toLowerCase(), 'PHANTOM X2 lebih canggih daripada X3')
+                    await checkKeywords(message.text.body.toLowerCase(), 'PHANTOM X2 lebih canggih daripada X3')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Ada beberapa ciri tambahan, tapi harga okay. Ada juga 3 tahun warranty tambahan.' });
@@ -1211,7 +1211,7 @@ async function handleNewMessages(req, res) {
                 }
                 
                 if (!keywordMatched) {                  
-                    checkKeywords(message.text.body.toLowerCase(), 'Ada guarantee untuk kualiti tak')
+                    await checkKeywords(message.text.body.toLowerCase(), 'Ada guarantee untuk kualiti tak')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Ada, kita jamin produk berkualiti. Ada juga 3 tahun warranty tambahan.' });
@@ -1224,7 +1224,7 @@ async function handleNewMessages(req, res) {
                 }
                 
                 if (!keywordMatched) {                  
-                    checkKeywords(message.text.body.toLowerCase(), 'Boleh bayar ansuran tak')
+                    await checkKeywords(message.text.body.toLowerCase(), 'Boleh bayar ansuran tak')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Kita ada plan ansuran yang fleksibel. Ada juga bayaran atome 3 ansuran bayaran.' });
@@ -1237,7 +1237,7 @@ async function handleNewMessages(req, res) {
                 }
                 
                 if (!keywordMatched) {                  
-                    checkKeywords(message.text.body.toLowerCase(), 'Ada servis pemasangan percuma tak')
+                    await checkKeywords(message.text.body.toLowerCase(), 'Ada servis pemasangan percuma tak')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Ada, kita uruskan pemasangan untuk anda. Ada juga 3 tahun warranty tambahan.' });
@@ -1250,7 +1250,7 @@ async function handleNewMessages(req, res) {
                 }
                 
                 if (!keywordMatched) {                  
-                    checkKeywords(message.text.body.toLowerCase(), 'Boleh buat custom order tak')
+                    await checkKeywords(message.text.body.toLowerCase(), 'Boleh buat custom order tak')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Boleh, kita boleh buat custom mengikut keperluan anda. Ada juga 3 tahun warranty tambahan.' });
@@ -1263,7 +1263,7 @@ async function handleNewMessages(req, res) {
                 }
                 
                 if (!keywordMatched) {                  
-                    checkKeywords(message.text.body.toLowerCase(), 'Ada warranty international tak')
+                    await checkKeywords(message.text.body.toLowerCase(), 'Ada warranty international tak')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Kita hanya ada warranty tempatan sahaja. Ada juga 3 tahun warranty tambahan.' });
@@ -1276,7 +1276,7 @@ async function handleNewMessages(req, res) {
                 }
                 
                 if (!keywordMatched) {                  
-                    checkKeywords(message.text.body.toLowerCase(), 'Apa beza utama antara X1 dan X2')
+                    await checkKeywords(message.text.body.toLowerCase(), 'Apa beza utama antara X1 dan X2')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'X2 ada ciri-ciri tambahan yang lebih canggih berbanding X1. Ada juga 3 tahun warranty tambahan.' });
@@ -1289,7 +1289,7 @@ async function handleNewMessages(req, res) {
                 }
                 
                 if (!keywordMatched) {                  
-                    checkKeywords(message.text.body.toLowerCase(), 'Ada harga khas untuk pelanggan lama tak')
+                    await checkKeywords(message.text.body.toLowerCase(), 'Ada harga khas untuk pelanggan lama tak')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Ya, kami berikan diskaun istimewa untuk pelanggan setia. Ada juga 3 tahun warranty tambahan.' });
@@ -1302,7 +1302,7 @@ async function handleNewMessages(req, res) {
                 }
                 
                 if (!keywordMatched) {                  
-                    checkKeywords(message.text.body.toLowerCase(), 'Bolehkah saya menukar produk jika tidak puas hati')
+                    await checkKeywords(message.text.body.toLowerCase(), 'Bolehkah saya menukar produk jika tidak puas hati')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Ya, kami mempunyai polisi pertukaran produk. Ada juga 3 tahun warranty tambahan.' });
@@ -1315,7 +1315,7 @@ async function handleNewMessages(req, res) {
                 }
                 
                 if (!keywordMatched) {                  
-                    checkKeywords(message.text.body.toLowerCase(), 'Adakah pembelian secara dalam talian selamat')
+                    await checkKeywords(message.text.body.toLowerCase(), 'Adakah pembelian secara dalam talian selamat')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Ya, kami mempunyai laman web yang selamat untuk pembelian dalam talian. Ada juga 3 tahun warranty tambahan.' });
@@ -1328,7 +1328,7 @@ async function handleNewMessages(req, res) {
                 }
                 
                 if (!keywordMatched) {                  
-                    checkKeywords(message.text.body.toLowerCase(), 'Berapa lama tempoh penghantaran untuk kawasan luar bandar')
+                    await checkKeywords(message.text.body.toLowerCase(), 'Berapa lama tempoh penghantaran untuk kawasan luar bandar')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Tempoh penghantaran mungkin mengambil masa sedikit lebih lama untuk kawasan luar bandar. Ada juga 3 tahun warranty tambahan.' });
@@ -1341,7 +1341,7 @@ async function handleNewMessages(req, res) {
                 }
                 
                 if (!keywordMatched) {                  
-                    checkKeywords(message.text.body.toLowerCase(), 'Apakah jenis kenderaan yang sesuai untuk produk ini')
+                    await checkKeywords(message.text.body.toLowerCase(), 'Apakah jenis kenderaan yang sesuai untuk produk ini')
                         .then(result => {
                             if (result) {
                                 sendWhapiRequest('messages/text', { to: sender.to, body: 'Produk kami sesuai untuk pelbagai jenis kenderaan termasuk kereta, van, dan truk. Ada juga 3 tahun warranty tambahan.' });
@@ -1361,8 +1361,7 @@ async function handleNewMessages(req, res) {
                     } else {
                         console.error('No valid response from webhook.');
                     }
-
-                }    
+                } 
             }
         }
         res.send('All messages processed');

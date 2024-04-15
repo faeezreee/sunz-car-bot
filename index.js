@@ -1362,30 +1362,34 @@ async function handleNewMessages(req, res) {
                 
                 if (!keywordMatched) {
                     const webhookResponse = await callWebhook('https://hook.us1.make.com/4b4hbjdcr95yw9bl3hr8mrk251h1olq8', message.text.body, sender.to, sender.name);
-                    if (webhookResponse.includes('||')){
-                        const [firstPart, secondPart] = webhookResponse.split("||");
-                        if (webhookResponse === 'stop') {
-                            break;
-                        } else if (webhookResponse) {
-                            await sendWhapiRequest('messages/text', { to: sender.to, body: firstPart });
-                            console.log('First part sent.');
-
-                            await sendWhapiRequest('messages/image', { to: sender.to, media: 'https://s3.us-east-1.amazonaws.com/cloud-studio-botsbca2d619-1916w6llinepa/7c1e380c-7b2f-423b-84cf-0bf0b1ef3421/media/d04019f6-0361-40fe-b75e-bcc547de1ec5.jpeg' });
-                            await sendWhapiRequest('messages/image', { to: sender.to, media: 'https://s3.us-east-1.amazonaws.com/cloud-studio-botsbca2d619-1916w6llinepa/7c1e380c-7b2f-423b-84cf-0bf0b1ef3421/media/8e386b20-a282-4b14-a336-baa8cf268247.jpeg' });
-                            await sendWhapiRequest('messages/image', { to: sender.to, media: 'https://s3.us-east-1.amazonaws.com/cloud-studio-botsbca2d619-1916w6llinepa/7c1e380c-7b2f-423b-84cf-0bf0b1ef3421/media/6f85514f-6636-4b4e-82ac-f6b61e111c1f.jpeg' });
-                            await sendWhapiRequest('messages/image', { to: sender.to, media: 'https://s3.us-east-1.amazonaws.com/cloud-studio-botsbca2d619-1916w6llinepa/7c1e380c-7b2f-423b-84cf-0bf0b1ef3421/media/d4ec2cdd-3235-4157-b903-ee08ef31056a.jpeg' });
-                            console.log('Second part sent.');
-                        } else {
-                            console.error('No valid response from webhook.');
+                    const parts = webhookResponse.split(/\s*\|\|\s*/);
+                    const imageUrls = [
+                        "https://firebasestorage.googleapis.com/v0/b/onboarding-a5fcb.appspot.com/o/images%2FCarbon%20Film.jpg?alt=media&token=3a33fb73-0f0d-4ccc-9c83-9643babe05d8",
+                        "https://firebasestorage.googleapis.com/v0/b/onboarding-a5fcb.appspot.com/o/Nano.jpg?alt=media&token=0579803a-ae5f-46a7-948a-51928604c9af",
+                        "https://firebasestorage.googleapis.com/v0/b/onboarding-a5fcb.appspot.com/o/images%2FCeramin%20Ultra%20HD.jpg?alt=media&token=a1e6fe1f-2b5d-446b-8321-4681f188ad7f",
+                        "https://firebasestorage.googleapis.com/v0/b/onboarding-a5fcb.appspot.com/o/Sputter.jpg?alt=media&token=240ac19b-5dec-433f-8425-d5d04bc4d15b",
+                    ];
+                
+                    for (let i = 0; i < parts.length; i++) {
+                        const part = parts[i].trim();
+                
+                        if (part === 'stop') {
+                            break; // Stop processing if 'stop' is encountered
+                        }
+                
+                        if (part) {
+                            await sendWhapiRequest('messages/text', { to: sender.to, body: part });
+                            console.log('Part sent:', part);
+                
+                            if (parts.length > 1){
+                                if (i < imageUrls.length) {
+                                    await sendWhapiRequest('messages/image', { to: sender.to, media: imageUrls[i] });
+                                    console.log('Image sent.');
+                                }
+                            }
                         }
                     }
-                    else if (webhookResponse) {
-                        await sendWhapiRequest('messages/text', { to: sender.to, body: webhookResponse });
-                        console.log('Response sent.');
-                    } else {
-                        console.error('No valid response from webhook.');
-                    }
-                } 
+                }                               
             }
         }
         res.send('All messages processed');

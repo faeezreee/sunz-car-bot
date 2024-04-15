@@ -198,6 +198,13 @@ async function handleNewMessages(req, res) {
         //console.log('Handling new messages...',receivedMessages);
         for (const message of receivedMessages) {
             let keywordMatched = false;
+
+            // Check if the message is from the specific phone number
+            if (message.from_name !== "Faeez") {
+                console.log('Ignoring message from', message.from);
+                continue; // Skip processing this message
+            }
+
             if (message.from_me) break;
                
             if(!message.chat_id.includes("whatsapp")){
@@ -1355,7 +1362,24 @@ async function handleNewMessages(req, res) {
                 
                 if (!keywordMatched) {
                     const webhookResponse = await callWebhook('https://hook.us1.make.com/4b4hbjdcr95yw9bl3hr8mrk251h1olq8', message.text.body, sender.to, sender.name);
-                    if (webhookResponse) {
+                    if (webhookResponse.includes('||')){
+                        const [firstPart, secondPart] = webhookResponse.split("||");
+                        if (webhookResponse === 'stop') {
+                            break;
+                        } else if (webhookResponse) {
+                            await sendWhapiRequest('messages/text', { to: sender.to, body: firstPart });
+                            console.log('First part sent.');
+
+                            await sendWhapiRequest('messages/image', { to: sender.to, media: 'https://s3.us-east-1.amazonaws.com/cloud-studio-botsbca2d619-1916w6llinepa/7c1e380c-7b2f-423b-84cf-0bf0b1ef3421/media/d04019f6-0361-40fe-b75e-bcc547de1ec5.jpeg' });
+                            await sendWhapiRequest('messages/image', { to: sender.to, media: 'https://s3.us-east-1.amazonaws.com/cloud-studio-botsbca2d619-1916w6llinepa/7c1e380c-7b2f-423b-84cf-0bf0b1ef3421/media/8e386b20-a282-4b14-a336-baa8cf268247.jpeg' });
+                            await sendWhapiRequest('messages/image', { to: sender.to, media: 'https://s3.us-east-1.amazonaws.com/cloud-studio-botsbca2d619-1916w6llinepa/7c1e380c-7b2f-423b-84cf-0bf0b1ef3421/media/6f85514f-6636-4b4e-82ac-f6b61e111c1f.jpeg' });
+                            await sendWhapiRequest('messages/image', { to: sender.to, media: 'https://s3.us-east-1.amazonaws.com/cloud-studio-botsbca2d619-1916w6llinepa/7c1e380c-7b2f-423b-84cf-0bf0b1ef3421/media/d4ec2cdd-3235-4157-b903-ee08ef31056a.jpeg' });
+                            console.log('Second part sent.');
+                        } else {
+                            console.error('No valid response from webhook.');
+                        }
+                    }
+                    else if (webhookResponse) {
                         await sendWhapiRequest('messages/text', { to: sender.to, body: webhookResponse });
                         console.log('Response sent.');
                     } else {

@@ -199,11 +199,11 @@ async function handleNewMessages(req, res) {
         for (const message of receivedMessages) {
             let keywordMatched = false;
 
-            // Check if the message is from the specific phone number
+            /* Check if the message is from the specific phone number
             if (message.from_name !== "Faeez") {
                 console.log('Ignoring message from', message.from);
                 continue; // Skip processing this message
-            }
+            }*/
 
             if (message.from_me) break;
                

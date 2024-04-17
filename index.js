@@ -1368,6 +1368,7 @@ async function handleNewMessages(req, res) {
                         "https://firebasestorage.googleapis.com/v0/b/onboarding-a5fcb.appspot.com/o/Nano.jpg?alt=media&token=0579803a-ae5f-46a7-948a-51928604c9af",
                         "https://firebasestorage.googleapis.com/v0/b/onboarding-a5fcb.appspot.com/o/images%2FCeramin%20Ultra%20HD.jpg?alt=media&token=a1e6fe1f-2b5d-446b-8321-4681f188ad7f",
                         "https://firebasestorage.googleapis.com/v0/b/onboarding-a5fcb.appspot.com/o/Sputter.jpg?alt=media&token=240ac19b-5dec-433f-8425-d5d04bc4d15b",
+                        "https://firebasestorage.googleapis.com/v0/b/onboarding-a5fcb.appspot.com/o/be013b81-81e4-46c2-b0e2-da67139afe6b.jpeg?alt=media&token=03ac80a6-8394-4559-882d-c46c7d2ae1f3"
                     ];
                 
                     for (let i = 0; i < parts.length; i++) {
